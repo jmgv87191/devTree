@@ -1,0 +1,20 @@
+{
+  "name": "devtree",
+  "version": "1.0.0",
+  "description": "Primer proyecto con express y typescript",
+  "license": "ISC",
+  "author": "Juan Manuel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.10"
+  }
+}
