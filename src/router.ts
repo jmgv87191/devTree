@@ -4,8 +4,12 @@ const router = Router();
 
 // autenticacion y registro
 
-router.get('/auth/register',( req, res )=>{
-    console.log('desde register')
+router.post('/auth/register',( req, res )=>{
+
+    res.json({
+        msg:"asd"
+    })
+
 })
 
 export default router
