@@ -4,7 +4,7 @@ export const connectDB = async () => {
     
 
     try {
-        const url = 'mongodb+srv://jmgv87191:dk2SYJaqNQbTVn3M@cluster0.2tbde.mongodb.net/linktree_node_typescript'
+        const url = ''
         const connection = await mongoose.connect(url)
 
         console.log(connection)
