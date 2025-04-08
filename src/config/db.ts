@@ -1,18 +1,20 @@
 import mongoose from 'mongoose'
+import color from 'colors'
 
 export const connectDB = async () => {
     
+    console.log()
 
     try {
-        const url = 'mongodb+srv://jmgv87191:dk2SYJaqNQbTVn3M@cluster0.2tbde.mongodb.net/linktree_node_typescript'
-        const connection = await mongoose.connect(url)
+        const {connection} = await mongoose.connect(process.env.MONGO_URI)
+        const url = `${connection.host}:${connection.port}`
 
-        console.log(connection)
-        console.log(`mongodb conectado`)
+
+        console.log( color.bgWhite.magenta ( `mongodb conectado en ${url}`))
         
     } catch (error) {
-        console.log(error)
-        
+        console.log( color.bgRed.black  (error.message))
+        process.exit(1)
     }
 
 
