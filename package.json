@@ -5,19 +5,25 @@
   "license": "ISC",
   "author": "Juan Manuel",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "colors": "^1.4.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-validator": "^7.2.1",
     "mongoose": "^8.13.1",
+    "slug": "^10.0.0",
     "tsc": "^2.0.4",
     "typescript": "^5.8.2"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/express": "^5.0.1",
-    "@types/node": "^22.13.10"
+    "@types/node": "^22.13.10",
+    "@types/slug": "^5.0.9"
   }
 }
