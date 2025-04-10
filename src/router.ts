@@ -1,22 +1,10 @@
 import { Router } from 'express'
-import User from './models/User';
+import { createAccount } from './handlers';
 
 const router = Router();
 
 // autenticacion y registro
 
-router.post('/auth/register',async( req, res )=>{
-
-    console.log(req.body)
-
-    await User.create(req.body)
-
-
-
-    res.json({
-        msg:"asd"
-    })
-
-})
+router.post('/auth/register', createAccount )
 
 export default router
