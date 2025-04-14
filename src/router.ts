@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import { body } from 'express-validator'
 import { createAccount, login } from './handlers/index.js';
+import { handleInputErrors } from './middleware/validation.js';
 
 const router = Router();
 
@@ -19,7 +20,7 @@ router.post('/auth/register',
     body('password')
         .isLength({min: 8})
         .withMessage('El password es muy corto'),
-
+    handleInputErrors,
     createAccount
 
 )
@@ -32,6 +33,7 @@ router.post('/auth/register',
         body('password')
             .notEmpty()
             .withMessage('el password es obligatorio'),
+            handleInputErrors,
         login)
 
 export default router

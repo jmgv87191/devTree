@@ -9,11 +9,6 @@ import { checkPassword, hashPassword } from "../utils/auth.js"
 
 export const createAccount =  async( req: Request, res: Response )=>{
 
-    // Manejar errores
-    let errors = validationResult(req)
-    if (!errors.isEmpty()) {
-        return res.status(400).json({errors: errors.array()})
-    }
 
 
 
